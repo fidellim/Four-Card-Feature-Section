@@ -131,7 +131,7 @@ p {
     font-size: 2.25rem;
   }
 }
-@media (min-height: 730px) {
+@media (min-height: 730px) and (min-width: 1055px) {
   body {
     display: flex;
     justify-content: center;
