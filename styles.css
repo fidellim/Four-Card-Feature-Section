@@ -17,6 +17,10 @@ body {
   margin: 4rem 2rem;
 }
 
+.four-cards {
+  max-width: 450px;
+  margin: 0 auto;
+}
 .four-cards div {
   position: relative;
   display: flex;
@@ -24,7 +28,7 @@ body {
   border-radius: 10px;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.75rem;
-  box-shadow: 0px 5px 15px #a3a5ae;
+  box-shadow: 2px 7px 15px rgba(163, 165, 174, 0.6);
   overflow: hidden;
 }
 .four-cards div h3 {
@@ -83,11 +87,61 @@ h3 {
 
 .heading-desc {
   text-align: center;
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem auto;
+  max-width: 500px;
 }
 
 p {
   color: #a3a5ae;
+}
+
+@media (min-width: 1055px) {
+  .four-cards {
+    width: max-content;
+    max-width: none;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-template-rows: auto auto;
+    gap: 1.75rem;
+  }
+  .four-cards div {
+    max-width: 311px;
+    margin-bottom: 0rem;
+  }
+  .four-cards .supervisor {
+    transform: translateY(50%);
+  }
+  .four-cards .team-builder {
+    grid-row: 1/span 1;
+    grid-column: 2/span 1;
+  }
+  .four-cards .karma {
+    grid-row: 2/span 1;
+    grid-column: 2/span 1;
+  }
+  .four-cards .calculator {
+    transform: translateY(50%);
+  }
+
+  .heading-desc {
+    margin: 0 auto 4rem auto;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-height: 730px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
